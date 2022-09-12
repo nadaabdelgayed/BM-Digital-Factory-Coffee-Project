@@ -1,0 +1,37 @@
+<div class="main-container">
+  <br>
+  <br>
+  <div *ngIf="product" class="container">
+    <div class="left-box"><img id="productImage" src="{{product.Image}}"></div>
+    <div class="right-box">
+      <h2 id="productName">{{product.Name}}</h2>
+      <h3 id="productDescription">{{product.Description}}</h3>
+      <h3 id="productPrice">{{product.Price }} EGP</h3>
+      <h3>{{product.Size}}</h3>
+      <h3>{{product.Sugar}}</h3>
+  
+      <button (click)="addToCart(product)">Add to Cart</button>
+  
+  
+    </div>
+  
+  </div> 
+  <hr>
+  <br/>
+  <br/>
+  <h2 id="productName">Related Products</h2>
+ 
+  <div class="related-Products-container">
+    <div *ngFor="let product of relatedProducts">
+      <div class="relative-product" (click)="changeProduct(product)">
+        <div class="relative-product-image-container">
+          <img class="relative-product-image" src="{{product.Image}}">
+        </div>
+        <div class="relative-product-info">
+          <h3 id="relative-product-name">{{product.Name}}</h3>
+          <h3 id="relative-product-price">{{product.Price}} EGP</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

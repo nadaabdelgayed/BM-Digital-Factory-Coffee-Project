@@ -1,0 +1,120 @@
+.container{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+}
+.main-container{
+    background-color: #f1ece3;
+    width: 100%;
+    height: 100%;
+}
+.left-box{
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+    border-right: #442a08;
+}
+.right-box{
+    flex: 1;
+    padding: 20px;
+    border-left: #442a08;
+}
+
+hr{
+    color: #442a08;
+    opacity: 0.25;
+    width:98%;
+}
+#productImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#productName{
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+#productPrice{
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+button{
+    background-color: #7c3506;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    
+}
+button:hover{
+    background-color: #442a08;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+#productDescription{
+    font-size: 28px;
+    font-style: times new roman;
+    font-weight: bold;
+    color: #351e03;
+    opacity: 0.75;
+    bold: 20px;
+    text-align: center;
+}
+.relative-product{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #eae5dc;
+    width: 500px;
+    height: auto;
+}
+.relative-product-image-container{
+    width:500px;
+    height: 400px;
+}
+
+.relative-product-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.relative-product-info{
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a0901;
+    text-align: center;
+    height:auto;
+}
+#relative-product-name{
+    font-size: 30px;
+    height:auto;
+}
+#relative-product-price{
+    font-size: 20px;
+    height:auto;
+    opacity: 0.75;
+}
+.related-Products-container{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    flex-direction: row;
+    overflow: auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
