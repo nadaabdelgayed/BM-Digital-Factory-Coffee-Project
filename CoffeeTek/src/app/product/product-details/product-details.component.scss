@@ -1,3 +1,4 @@
+@import '~primeicons/primeicons.css';
 .container{
     display: flex;
     width: 100%;
@@ -20,6 +21,7 @@
     flex: 1;
     padding: 20px;
     border-left: #442a08;
+    align-items: center;
 }
 
 hr{
@@ -75,7 +77,7 @@ button:hover{
     text-align: center;
 }
 .relative-product{
-    flex-direction: row;
+    // flex-direction: row;
     justify-content: space-between;
     padding: 20px;
     background-color: #eae5dc;
@@ -84,13 +86,15 @@ button:hover{
 }
 .relative-product-image-container{
     width:500px;
-    height: 400px;
+    height: 500px;
+    text-align: center;
 }
 
 .relative-product-image{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: cover;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
 }
 .relative-product-info{
 
@@ -112,9 +116,92 @@ button:hover{
 .related-Products-container{
     display: flex;
     width: 100%;
-    height: 600px;
+    height: 620px;
     flex-direction: row;
     overflow: auto;
     flex-wrap: nowrap;
     overflow-x: auto;
+}
+
+// .product-item {
+//     .product-item-content {
+//         border: 1px solid var(--surface-d);
+//         border-radius: 3px;
+//         margin: .3rem;
+//         text-align: center;
+//         padding: 2rem 0;
+//     }
+
+//     .product-image {
+//         height: 80%;
+//         width: 80%;
+//         object-fit: cover;
+//         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+//     }
+// }
+p-inputnumber, .p-inputnumber {
+    display: inline-flex;
+  
+    align-items: center;
+    
+    // position: sticky;
+}
+.p-component, .p-component * {
+    box-sizing: border-box;
+}
+.p-component {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: normal;
+}
+.p-inputtext{
+    width: 30%;
+    height: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.form-elements{
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    align-items: center;
+    // left: 50%;
+    // right: 10%;
+    // position:relative;
+}
+@media screen and (max-width: 960px) {
+    button {
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+}
+
+:host ::ng-deep {
+    .p-toast-message-custom {
+        background-color: #1dbf0f;
+        border: solid #8A427A;
+        border-width: 0 0 0 6px;
+        // top:80%;
+        // bottom:50%;
+        // position: relative;
+        color: #2c1e30;
+        .p-toast-icon-close {
+            color: #2c1e30;
+        }
+    }
+}
+.toast-message{
+    position: relative;
+    top: 80%;
+    bottom: 0%;
+    background-color: #10f300;
+    border: solid #007f33;
+    border-width: 0 0 0 6px;
+    color: #2c1e30;
+    .p-toast-icon-close {
+        color: #2c1e30;
+    }
 }

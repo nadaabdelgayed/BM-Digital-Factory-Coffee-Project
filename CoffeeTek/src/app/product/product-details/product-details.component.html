@@ -1,16 +1,49 @@
+
+<p-toast  class="toast-message" [breakpoints]="{'1080px': {width: '100%', right: '0', left: '0'}}" [showTransformOptions]="'translateX(100%)'" styleClass="toast-message"></p-toast>
+
+
+<!-- <p-toast position="top-center" key="tc"></p-toast> -->
+<!-- <p-toast position="bottom-center" key="bc"></p-toast> -->
+
+
 <div class="main-container">
   <br>
   <br>
   <div *ngIf="product" class="container">
-    <div class="left-box"><img id="productImage" src="{{product.Image}}"></div>
+    <div class="left-box"><img id="productImage" src="{{product.image}}"></div>
     <div class="right-box">
-      <h2 id="productName">{{product.Name}}</h2>
-      <h3 id="productDescription">{{product.Description}}</h3>
-      <h3 id="productPrice">{{product.Price }} EGP</h3>
-      <h3>{{product.Size}}</h3>
-      <h3>{{product.Sugar}}</h3>
-  
-      <button (click)="addToCart(product)">Add to Cart</button>
+      <h2 id="productName">{{product.name}}</h2>
+      <br/>
+      <h3 id="productDescription">{{product.descirption}}</h3>
+      <br/>
+      <h3 id="productDescription">Sugar: {{product.sugar}} cubes</h3>
+      <br/>
+      <br/>
+      <h3 id="productPrice">{{product.price }} EGP</h3>
+      <!-- <h3>{{product.size}}</h3> -->
+      
+      <div class="form-elements">
+        
+        <span class="p-inputnumber p-component p-inputnumber-buttons-horizontal">
+          
+          <button type="button" (click)="decrementAmount()" pbutton="" class="p-element p-button-danger p-inputnumber-button p-inputnumber-button-down p-button p-component p-button-icon-only ng-star-inserted">
+            <span class="p-button-icon pi pi-minus" aria-hidden="true">
+            </span>
+            
+            <span aria-hidden="true" class="p-button-label">&nbsp;</span></button>
+            <input pinputtext="" inputmode="decimal" class="p-inputtext p-component p-element p-inputnumber-input p-filled" id="horizontal" aria-valuenow="1" [(ngModel)]="product.boughtItemsCount" ><!----><!---->
+            
+              
+              <button type="button"(click)="incrementAmount()" pbutton="" class="p-element p-button-success p-inputnumber-button p-inputnumber-button-up p-button p-component p-button-icon-only ng-star-inserted ">
+                <span class="p-button-icon pi pi-plus" aria-hidden="true"></span><span aria-hidden="true" class="p-button-label">&nbsp;
+    
+                </span></button><!---->
+            </span>
+            <br/>
+      <br/>
+      <button pButton pRipple type="button" label="Add to Cart" class="p-button-raised p-button-secondary" (click)="addToCart(product)"></button>
+      </div>
+      
   
   
     </div>
@@ -18,20 +51,44 @@
   </div> 
   <hr>
   <br/>
-  <br/>
+  
   <h2 id="productName">Related Products</h2>
- 
-  <div class="related-Products-container">
+  <br/>
+  <div class="related-Products-container"> 
     <div *ngFor="let product of relatedProducts">
       <div class="relative-product" (click)="changeProduct(product)">
         <div class="relative-product-image-container">
-          <img class="relative-product-image" src="{{product.Image}}">
+          <img class="relative-product-image" src="{{product.image}}">
         </div>
         <div class="relative-product-info">
-          <h3 id="relative-product-name">{{product.Name}}</h3>
-          <h3 id="relative-product-price">{{product.Price}} EGP</h3>
+          <h3 id="relative-product-name">{{product.name}}</h3>
+          <h3 id="relative-product-price">{{product.price}} EGP</h3>
         </div>
       </div>
     </div>
   </div>
+  <!-- <p-carousel [value]="relatedProducts" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+    <ng-template pTemplate="header">
+         <h5>Circular, AutoPlay, 3 Items per Page and Scroll by 1</h5>
+    </ng-template>
+    <ng-template let-product pTemplate="item">
+        <div class="product-item" (click)="changeProduct(product)" >
+            <div class="product-item-content">
+                <div class="mb-3" class="relative-product-image-container">
+                    <img  src="{{product.image}}" [alt]="product.name" class="product-image" />
+                </div>
+                <div>
+                    <h4 class="mb-1">{{product.name}}</h4>
+                    <h6 class="mt-0 mb-3">${{product.price}}</h6>
+                     <span [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                    <div class="car-buttons mt-5">
+                        <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                        <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                        <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel> -->
 </div>

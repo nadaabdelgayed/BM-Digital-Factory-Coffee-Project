@@ -1,13 +1,13 @@
-export interface Product {
-    Id: number;
-    Name: string;
-    Price: number;
-    Image: string;
-    Size: number;
-    Sugar: number;
-    Description: string;
-    Color: string;
-    isAddedToCart: boolean;
-    boughtItemsCount: number;
-    Category: string;
+export class Product {
+    id!: number;
+    name!: string;
+    price!: number;
+    image!: string;
+    size: number=0;
+    sugar!: number;
+    descirption!: string;
+    color: string='Brown';
+    isAddedToCart: boolean=false;
+    boughtItemsCount: number=1;
+    category!: string;
 }
