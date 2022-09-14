@@ -91,10 +91,11 @@
 }
 button{
     position: relative;
-    bottom: 0;
-    right: 0;
-    left: 90%;
-
+    // bottom: 0;
+    // right: 0;
+    // left: 90%;
+    width:98.5%;
+    align-items: center;
     background-color: #7c3506;
     color: #ffffff;
     font-size: 20px;
@@ -114,4 +115,10 @@ button:hover{
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
+}
+.product-price-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 m-auto">
+      <h1 class="card-header text-center">
+        Login Page
+      </h1>
+      <div class=" card-body">
+        <form #loginform>
+          <div class="row form-group col-12">
+            <span class="p-float-label">
+              <input name="email" [(ngModel)]="email" class="form-control" id="float-input username1" type="text"
+                pInputText required>
+              <label for="float-input">Email</label>
+            </span>
+          </div>
+          <div class="row form-group col-12">
+            <span class="p-float-label">
+              <input name="password1" [(ngModel)]="password1" class="form-control" id="float-input password1"
+                type="password" pInputText required>
+              <label for="float-input">Password</label>
+
+            </span>
+            <div style="text-align:center">Not a member, <div routerLink="/register">Sign Up Here</div></div>
+            <div style="width: 100%; display:flex;justify-content: center;" class="col-6">
+                <button (click)="handleLogin()"
+                 [disabled]="loginform.checkValidity()==false || httpCalling" type="submit" class="btn btn-primary">Log in</button>
+
+            </div>
+
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

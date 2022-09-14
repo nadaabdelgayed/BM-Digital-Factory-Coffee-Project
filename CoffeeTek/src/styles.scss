@@ -1,6 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+/* You can add global styles to this file, and also import other style files */
+@import 'swiper/scss/pagination';
+@import 'swiper/scss';
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'El Messiri', sans-serif;
+    font-weight: 500;
+
+}
+.menu{
+    background-color: white !important;
+}
+.p-element{
+    width: 100%;
+}
+.p-element ul{
+    justify-content:center ;
+}
+.p-element ul li{
+    width: auto;
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    color: #131415 !important;
+    font-size: 18px;
+}
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-icon {
+    color: #c87137 !important;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+
+.grid-nogutter {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+.product-grid-item[_ngcontent-dgo-c69] .product-grid-item-content[_ngcontent-dgo-c69] {
+    height: 462px !important;
+}
+.p-button{
+    background-color: #915B34 !important;
+    color: white;
+}
+.pi{
+    color: white;
 }

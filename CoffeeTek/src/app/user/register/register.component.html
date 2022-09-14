@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+      <div class="col-6 m-auto">
+        <h1 class="card-header text-center">
+          Sign Up
+        </h1>
+        <div class=" card-body">
+          <form #SignUpform>
+            <div class="row form-group col-12">
+              <span class="p-float-label">
+                <input name="email" [(ngModel)]="user.email" class="form-control" id="float-input username1" type="text"
+                  pInputText required>
+                <label for="float-input">Email</label>
+              </span>
+            </div>
+            <div class="row form-group col-12">
+                <span class="p-float-label">
+                  <input name="email" [(ngModel)]="user.name" class="form-control" id="float-input name" type="text"
+                    pInputText required>
+                  <label for="float-input">Name</label>
+                </span>
+              </div>
+            <div class="row form-group col-12">
+              <span class="p-float-label">
+                <input name="password1" [(ngModel)]="user.password" class="form-control" id="float-input password1"
+                  type="password" pInputText required>
+                <label for="float-input">Password</label>
+  
+              </span>
+              <div style="width: 100%; display:flex;justify-content: center;" class="col-6">
+                  <button (click)="handleRegisteration()"
+                   [disabled]="SignUpform.checkValidity()==false" type="submit" class="btn btn-primary">Sign Up</button>
+  
+              </div>
+  
+  
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

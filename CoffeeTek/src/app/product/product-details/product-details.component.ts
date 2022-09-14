@@ -65,7 +65,12 @@ export class ProductDetailsComponent implements OnInit {
     product.boughtItemsCount = 1;
   }
   showSuccess() {
-    this.messageService.add({severity:'success', summary: 'Success', detail: 'Item added to cart'});
+    // this.messageService.add({severity:'success', summary: 'Success', detail: 'Item added to cart'});
+    const msg = document.getElementById('snackbar') as HTMLInputElement
+    msg.className="show";
+    setTimeout(() => {
+      msg.className=msg.className.replace("show","")
+    }, 3000);
   }
   changeProduct(product: Product) {
     this.router.navigate(['/product', product.id]);

@@ -10,6 +10,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {InputNumberModule} from 'primeng/inputnumber';
 import { FormsModule } from '@angular/forms';
 import {ToastModule} from 'primeng/toast';
+import { MenuComponent } from './menu/menu.component';
+import {DataViewModule} from 'primeng/dataview';
+
 
 
 @NgModule({
@@ -22,9 +25,10 @@ import {ToastModule} from 'primeng/toast';
     BrowserAnimationsModule,
     InputNumberModule,
     FormsModule,
-    ToastModule
+    ToastModule,
+    DataViewModule
   ],
-  declarations: [ProductDetailsComponent, ProductCartComponent],
+  declarations: [ProductDetailsComponent, ProductCartComponent, MenuComponent],
   exports: [ProductDetailsComponent, ProductCartComponent]
 })
 export class ProductModule { }

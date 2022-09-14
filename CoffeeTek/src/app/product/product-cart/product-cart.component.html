@@ -14,6 +14,10 @@
               <span [class]="'product-badge status-available'">{{product.boughtItemsCount}} Items</span>
           </div>
       </div>
+      <div *ngIf="!this.cartProducts">
+          <p>There are no items in your cart.</p>
+          <p>click <a routerLink="menu">HERE</a> to start Shopping!</p>
+      </div>
   </ng-template>
 </p-orderList>
 <div class="product-price-container">

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product.model';
-import { ProductService } from '../product.service';
 import { ProductCartService } from '../product-cart/product-cart.service';
 
 @Component({
@@ -13,7 +12,9 @@ export class ProductCartComponent implements OnInit {
   cartProducts!: Product[];  
   totalPrice!:number;
 
-  constructor(private productService: ProductService, private productCartService: ProductCartService) { }
+  constructor( private productCartService: ProductCartService) { 
+    
+  }
 
   ngOnInit() {
     this.setProducts();
