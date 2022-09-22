@@ -1,0 +1,10 @@
+<p-menubar class="menu" [model]="items">
+    <ng-template pTemplate="start" class="navbar">
+        <img class="img-fluid" src="/assets/images/coffee-logo.png" height="60" class="mr-2">
+    </ng-template>
+    <Button (click)="logInOut()" [style]="{'width': '10em'}">
+        <div *ngIf="loginService.isLogin">Log Out</div>
+        <div *ngIf="!loginService.isLogin">Log In</div>
+    </Button>
+
+</p-menubar>

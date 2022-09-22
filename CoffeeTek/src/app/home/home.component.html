@@ -1,0 +1,75 @@
+<swiper [spaceBetween]="30" [centeredSlides]="true" [autoplay]="{
+    delay: 2500,
+    disableOnInteraction: false
+  }" [pagination]="{
+    clickable: true
+  }" [navigation]="true" class="mySwiper">
+  <ng-template swiperSlide>
+    <img width="100%" class="roller-img" src="assets/images/swiper1.jpg" alt="">
+    <div class="main-bg">
+    </div>
+    <a class="thm-btn" routerLink="/menu">shop now</a>
+    <h1 class="main-word wow fadeInDown"> Coffe the Gasoline of Life</h1>
+    <h1 class="main-sub-word wow fadeInDown">Coffee Because Bad Mornings Deserve Second Chance</h1>
+  </ng-template>
+  <ng-template swiperSlide>
+    <img width="100%" class="roller-img" src="assets/images/coffee-swper2.webp" alt="">
+    <div class="main-bg">
+
+    </div>
+
+    <a class="thm-btn" routerLink="/menu">shop now</a>
+    <h1 class="main-word wow fadeInDown"> Coffe the Gasoline of Life</h1>
+    <h1 class="main-sub-word wow fadeInDown">Coffee Because Bad Mornings Deserve Second Chance</h1>
+  </ng-template>
+</swiper>
+
+<section class="about">
+  <div class="container">
+    <div class="row">
+      <h1>About Coffee</h1>
+      <p>the Italian coffee brand has been leading the coffee capsules market for the past 16 years,
+        specializing in coffee roasting and in the production of pods and capsules containing espresso coffee, soluble
+        and leaf-based drinks. Dolce Vita produces tasty Espresso capsules, compatible with Nespresso Capsules and
+        Delonghi Capsules along with distinguish blends and deferent intensity that will never fail to satisfy your
+        taste.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="about2">
+  <div style="display: flex;">
+    <div class=" col-5">
+      <img class="img-fluid" src="https://dolcevita.com.eg/wp-content/uploads/2022/05/coffeebean1.webp" alt="">
+    </div>
+    <div class="col-7">
+      <div class="about2-content container">
+        <h1>Daily Coffee News</h1>
+        <p>Italian coffee is now roasted using solar energy to roast beans An Italian company has devised a way to roast
+          coffee beans by just using the Sun’s energy and dramatically cutting Co2 emissions
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<section class="about3">
+  <div style="display: flex;">
+
+    <div class="col-7">
+      <div style="color: white;" class="container about2-content">
+        <h1 class="text-center">Daily Coffee News</h1>
+        <p class="text-center">Italian coffee is now roasted using solar energy to roast beans An Italian company has
+          devised a way to roast
+          coffee beans by just using the Sun’s energy and dramatically cutting Co2 emissions
+        </p>
+      </div>
+
+    </div>
+    <div class=" col-5">
+      <img class="" src="https://dolcevita.com.eg/wp-content/uploads/2022/05/CoffeeCapsule-blog.webp" alt="">
+    </div>
+  </div>
+
+</section>

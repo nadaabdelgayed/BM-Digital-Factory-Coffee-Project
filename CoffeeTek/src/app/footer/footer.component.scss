@@ -1,0 +1,18 @@
+.footer{
+    background-color: #6e4b33 ;
+    height: 10vh;
+    
+border-radius: 2px;
+// position: absolute;
+position:sticky;
+width: 100%;
+bottom: 0px;
+}
+.footer .text{
+    text-align: center;
+    color: white;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    top: 30px;
+}

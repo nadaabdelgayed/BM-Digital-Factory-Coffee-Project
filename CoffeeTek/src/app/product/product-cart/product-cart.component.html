@@ -1,0 +1,30 @@
+<p-orderList [value]="cartProducts" [listStyle]="{'max-height':'30rem'}" header="Product Cart" filterBy="name" filterPlaceholder="Filter by name" [dragdrop]="true">
+  <ng-template let-product pTemplate="item">
+      <div class="product-item">
+          <div class="image-container">
+                  <img src="{{product.image}}" [alt]="product.name" class="product-image" />
+          </div>
+          <div class="product-list-detail">
+              <h5 class="mb-2">{{product.name}}</h5>
+              <i class="pi pi-tag product-category-icon"></i>
+              <span class="product-category">{{product.category}}</span>
+          </div>
+          <div class="product-list-action">
+              <h6 class="mb-2">{{product.price}} EGP</h6>
+              <span [class]="'product-badge status-available'">{{product.boughtItemsCount}} Items</span>
+          </div>
+      </div>
+      <div *ngIf="!this.cartProducts">
+          <p>There are no items in your cart.</p>
+          <p>click <a routerLink="menu">HERE</a> to start Shopping!</p>
+      </div>
+  </ng-template>
+</p-orderList>
+<div class="product-price-container">
+  <h2 class="right-item">Total</h2>
+  <h3 class="left-item">{{totalPrice}} EGP</h3>
+</div>
+<div class="product-list-action">
+  <button pButton pRipple type="button" label="Clear Cart" class="p-button-raised p-button-secondary" (click)="clearCart()"></button>
+<button pButton pRipple type="button" label="Place Order" class="p-button-raised p-button-secondary" (click)="clearCart()"></button>
+</div>

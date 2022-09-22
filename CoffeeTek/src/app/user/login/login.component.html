@@ -1,0 +1,51 @@
+<div class="body">
+  <div class="container mt-5 ">
+    <div class="row">
+      <div class="content col-6">
+        <h2 class="card-header text-left">
+          Login
+        </h2>
+        <p>you should enter your username and password</p>
+        <div class=" card-body">
+          <form #loginform>
+            <div class="row form-group col-12">
+              <span class="p-float-label">
+                <input name="email" [(ngModel)]="email" class="form-control" id="float-input username1" type="text"
+                  pInputText required>
+                <label for="float-input">Username</label>
+              </span>
+            </div>
+            <div class="row form-group col-12">
+              <span class="p-float-label">
+                <input name="password1" [(ngModel)]="password1" class="form-control" id="float-input password1"
+                  type="password" pInputText required>
+                <label for="float-input">Password</label>
+
+            </span>
+            <div style="text-align:center;align-items:center;">Not a member, Sign Up <a class="link" (click)="goToSignUp()">Here</a></div>
+            <div style="width: 100%; display:flex;justify-content: center;" class="col-6">
+                <button (click)="handleLogin()"
+                 [disabled]="loginform.checkValidity()==false || httpCalling" type="submit" class="btn btn-primary">Log in</button>
+
+            </div>
+
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="image col-6">
+
+    <img src="https://i.pinimg.com/564x/a2/3a/ce/a23ace49ade8d6f568ba81fa6de30ae0.jpg" alt="">
+  </div>
+  <div class="overlay">
+
+  </div>
+  <div class="image-content">
+    <h2 class="main-word">Life is Short Enjoy your Coffee </h2>
+    <h2 class="sub-word">Insert Coffee to begin</h2>
+  </div>
+</div>
+

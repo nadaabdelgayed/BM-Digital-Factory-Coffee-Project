@@ -1,0 +1,23 @@
+.form-group{
+    margin: 30PX;
+}
+.btn{
+    background-color: #915B34;
+    border: none;
+    width: 200px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btn:hover{
+    background-color: #866148;
+
+}
+label{
+    margin-left: 10px;
+}
+form .ng-invalid{
+    border-left: solid 5px red;
+}
+form .ng-invalid{
+    border-left: solid 5px green;
+}

@@ -1,0 +1,112 @@
+.form-group{
+    margin: 30PX;
+}
+
+.btn:hover{
+    background-color: #866148;
+
+}
+label{
+    margin-left: 10px;
+}
+form .ng-invalid{
+    border-left: solid 5px red;
+}
+form .ng-invalid{
+    border-left: solid 5px green;
+}
+a,.link{
+    color: #19110b;
+    underline: none;
+}
+.link:hover{
+    color: #78401a;
+}
+
+  
+  .btn {
+    background-color: #915B34;
+    border: none;
+    width: 420px;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    right: 15%;
+  }
+  
+  .btn:hover {
+    background-color: #866148;
+  
+  }
+  
+  label {
+    margin-left: 10px;
+  }
+  
+  form .ng-invalid {
+    border-left: solid 5px red;
+  }
+  
+  form .ng-valid {
+    border-left: solid 5px #915B34;
+  }
+  
+  img {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .image {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60%;
+  }
+  
+  h2 {
+    margin-left: 50px;
+      
+  
+  }
+  
+  p {
+    margin-left: 50px;
+    margin-top: 10px;
+  
+  }
+  .content{
+      margin-top: 100px;
+      transform: translate(-10%);
+  }
+  
+  input {
+    width: 70%;
+    margin-top: 20px;
+  }
+  a{
+      text-align: center;
+      margin-left: 30px;
+      color: black;
+      text-decoration: none;
+  }
+  .overlay{
+      background-color: black;
+      width: 60%;
+      height: 100vh;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      opacity: 0.4;
+      
+  }
+  .image-content{
+      position: absolute;
+      color: white;
+      top: 30%;
+      right: 9%;
+  
+  }
+  .main-word{
+      font-size: 45px;
+  
+  }

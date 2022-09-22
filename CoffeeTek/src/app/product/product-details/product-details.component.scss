@@ -1,0 +1,253 @@
+@import '~primeicons/primeicons.css';
+.container{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+}
+.main-container{
+    background-color: #f1ece3;
+    width: 100%;
+    height: 100%;
+}
+.left-box{
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+    border-right: #442a08;
+}
+.right-box{
+    flex: 1;
+    padding: 20px;
+    border-left: #442a08;
+    align-items: center;
+}
+
+hr{
+    color: #442a08;
+    opacity: 0.25;
+    width:98%;
+}
+#productImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+
+}
+#productName{
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+#productPrice{
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+button{
+    background-color: #7c3506;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    
+}
+button:hover{
+    background-color: #442a08;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+#productDescription{
+    font-size: 28px;
+    font-style: times new roman;
+    font-weight: bold;
+    color: #351e03;
+    opacity: 0.75;
+    bold: 20px;
+    text-align: center;
+}
+.relative-product{
+    // flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #eae5dc;
+    width: 500px;
+    height: auto;
+}
+.relative-product-image-container{
+    width:500px;
+    height: 500px;
+    text-align: center;
+}
+
+.relative-product-image{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+}
+.relative-product-info{
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a0901;
+    text-align: center;
+    height:auto;
+}
+#relative-product-name{
+    font-size: 30px;
+    height:auto;
+}
+#relative-product-price{
+    font-size: 20px;
+    height:auto;
+    opacity: 0.75;
+}
+.related-Products-container{
+    display: flex;
+    width: 100%;
+    height: 620px;
+    flex-direction: row;
+    overflow: auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+// .product-item {
+//     .product-item-content {
+//         border: 1px solid var(--surface-d);
+//         border-radius: 3px;
+//         margin: .3rem;
+//         text-align: center;
+//         padding: 2rem 0;
+//     }
+
+//     .product-image {
+//         height: 80%;
+//         width: 80%;
+//         object-fit: cover;
+//         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+//     }
+// }
+p-inputnumber, .p-inputnumber {
+    display: inline-flex;
+  
+    align-items: center;
+    
+    // position: sticky;
+}
+.p-component, .p-component * {
+    box-sizing: border-box;
+}
+.p-component {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: normal;
+}
+.p-inputtext{
+    width: 30%;
+    height: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.form-elements{
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    align-items: center;
+    // left: 50%;
+    // right: 10%;
+    // position:relative;
+}
+@media screen and (max-width: 960px) {
+    button {
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+}
+
+:host ::ng-deep {
+    .p-toast-message-custom {
+        background-color: #1dbf0f;
+        border: solid #8A427A;
+        border-width: 0 0 0 6px;
+        // top:80%;
+        // bottom:50%;
+        // position: relative;
+        color: #2c1e30;
+        .p-toast-icon-close {
+            color: #2c1e30;
+        }
+    }
+}
+.toast-message{
+    position: relative;
+    top: 80%;
+    bottom: 0%;
+    background-color: #10f300;
+    border: solid #007f33;
+    border-width: 0 0 0 6px;
+    color: #2c1e30;
+    .p-toast-icon-close {
+        color: #2c1e30;
+    }
+}
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #419660;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  #snackbar i{
+    border-radius: 4px; 
+    border: 1px solid #33774c;
+  }
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
