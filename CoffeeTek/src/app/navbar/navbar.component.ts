@@ -10,8 +10,10 @@ import { Router } from '@angular/router';
     styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
-    constructor( public loginService: LoginService, private router: Router) { } 
+    isLogin:boolean;
+    constructor( public loginService: LoginService, private router: Router) { 
+        this.isLogin = this.loginService.isLogin;
+    } 
 
      items!: MenuItem[];
 

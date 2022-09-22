@@ -53,7 +53,7 @@ export class ProductDetailsComponent implements OnInit {
       
       this.product = (products.find(p => p.id == id)) as Product;
       this.product.boughtItemsCount = 1;
-      this.relatedProducts = products.filter(p => p.id != this.product.id);
+      this.relatedProducts = products.filter(p => p.id != this.product.id && p.category == this.product.category);
     });
     
   }

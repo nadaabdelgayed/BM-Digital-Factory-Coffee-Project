@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login/login.service';
 
 @Component({
   selector: 'app-profile',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+  name:string;
+  email:string;
 
-  constructor() { }
+  constructor(public loginService:LoginService) {
+    this.name = localStorage.getItem('fullName') || '';
+    this.email = localStorage.getItem('email') || '';
+  }
 
   ngOnInit(): void {
   }

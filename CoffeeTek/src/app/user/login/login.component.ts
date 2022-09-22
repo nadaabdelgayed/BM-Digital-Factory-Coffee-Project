@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     this.userService.logIn(this.email, this.password1).subscribe((resp:any)=>{
       console.log(resp);
         if(resp.access_token){
-          this._login.logMe(resp.access_token);
+          this._login.logMe(resp.access_token,resp.email);
           this._router.navigate(['home'])
         }else{
           alert(resp.error)
@@ -35,5 +35,8 @@ export class LoginComponent implements OnInit {
 
     }
     );
+  }
+  goToSignUp(){
+    this._router.navigate(['register']);
   }
 }

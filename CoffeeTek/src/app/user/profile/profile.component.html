@@ -1,1 +1,5 @@
-<p>profile works!</p>
+<div *ngIf="loginService.isLogin">
+   <h1>Hello! {{name}}</h1>
+   <p>You are now logged in as <strong>{{email}}</strong> and can order any beverage you want.</p>
+   <p> You ca now enjoy our Cappucinoes, Lattes, Espressoes.. etc</p>
+</div>

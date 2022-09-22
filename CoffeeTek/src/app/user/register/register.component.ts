@@ -26,11 +26,11 @@ export class RegisterComponent implements OnInit {
     console.log(this.user);
     this.userService.register(this.user).subscribe((resp:any)=>{
       console.log(resp);
-        if(resp.access_token){
-          this.loginService.logMe(resp.access_token);
-          this.router.navigate(['home'])
+        if(resp && resp.name && resp.email){
+          alert('Registered Successfully, please Sign in');
+          this.router.navigate(['login'])
         }else{
-          alert(resp.error)
+          alert(resp.error || 'User already exists, please try again')
           this.httpCalling = false;
 
         }
